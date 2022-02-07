@@ -1,0 +1,63 @@
+:root {
+  --main-bck: #F8EDE3;
+  --main-txt: #474e46;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: var(--main-bck);
+}
+
+h1 {
+  color: var(--main-txt);
+  font-size: 3.5rem;
+}
+
+input {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* top-container section */
+.header {
+  margin: 1.5rem auto 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+/* main container */ 
+.main-container {
+  
+}
+
+/* search */
+.search {
+  margin: 1rem auto 0 auto;
+  text-align: center;
+}
+
+#search-field {
+  width: 30%;
+  font-size: 1rem;
+  padding: 0.2rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* list container */
+.list-container {
+
+}
+
+.card {
+  
+}
