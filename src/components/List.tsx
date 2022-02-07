@@ -11,7 +11,7 @@ export default function List(props: any) {
 
                 data && data.length > 0 ?
 
-                    data.map((book: any) => {
+                    data.map(function (book: any) {
                         return (
                             <Card
                                 key={book.id}
@@ -21,25 +21,9 @@ export default function List(props: any) {
                                 published={book.volumeInfo.publishedDate}
                             />
                         )
-                    }) : <p className="no-data">No books yet...</p>
-                
+                    }) : <p className="np-data">No books yet...</p>
             }
 
         </div>
     )
 }
-
-
-// data && data.length > 0 ?
-
-// data.map((id: number, smallThumbnail: any, title: string, authors: string, publishedDate: any) => {
-//     return (
-//         <Card
-//             key={id}
-//             image={smallThumbnail}
-//             title={title}
-//             author={authors}
-//             published={publishedDate}
-//         />
-//     )
-// }) : <p className="no-data">No books yet...</p>
