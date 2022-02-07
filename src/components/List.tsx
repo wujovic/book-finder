@@ -12,7 +12,11 @@ export default function List(props: any) {
                         return (
                             <Card
                                 key={book.id}
-                                image={book.volumeInfo.imageLinks.smallThumbnail}
+                                image={
+                                    book.volumeInfo.imageLinks === undefined
+                                        ? ""
+                                        : `${book.volumeInfo.imageLinks.thumbnail}`
+                                }
                                 title={book.volumeInfo.title}
                                 subtitle={book.volumeInfo.subtitle}
                                 author={book.volumeInfo.authors}
