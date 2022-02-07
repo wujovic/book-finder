@@ -117,3 +117,18 @@ input:focus {
 .credits a {
   color: var(--no-data)
 }
+
+/* Breakpoints */
+
+@media only screen and (max-width: 950px) {
+  .list-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .subtitle {
+    display: none;
+  }
+}
