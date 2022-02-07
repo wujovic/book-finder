@@ -6,8 +6,8 @@ export default function Card(props: any) {
             <div className="card-desc">
 
                 <h3 className="title">{props.title}</h3>
-                <h4 className="author">{props.author}</h4>
-                <p className="published">{props.published}</p>
+                <h4 className="author">Author: {props.author}</h4>
+                <p className="published">Published: {props.published}</p>
 
             </div>
 
