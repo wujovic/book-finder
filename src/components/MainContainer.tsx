@@ -17,12 +17,7 @@ export default function MainContainer() {
             .get("https://www.googleapis.com/books/v1/volumes")
             .query({ q: setBooks })
             .then((data) => {
-                console.log(data.body.items[0]);
-                console.log(data.body.items.length);
-                console.log(typeof(data.body.items));
-
-
-                setBooks(data.body.items)
+                setBooks([...books])
             })
     }
 
