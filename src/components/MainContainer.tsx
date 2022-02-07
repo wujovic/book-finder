@@ -6,18 +6,19 @@ import request from "superagent";
 export default function MainContainer() {
 
     const [books, setBooks] = useState([]);
+    const [query, setQuery] = useState('');
 
     function handleChange(e: any) {
-        setBooks(e.target.value);
+        setQuery(e.target.value);
     }
 
     function handleSearch(e: any) {
         e.preventDefault();
         request
             .get("https://www.googleapis.com/books/v1/volumes")
-            .query({ q: setBooks })
+            .query({ q: query })
             .then((data) => {
-                setBooks([...books])
+                setBooks(data.body.items)
             })
     }
 
@@ -27,7 +28,7 @@ export default function MainContainer() {
                 handleChange={handleChange}
                 handleSearch={handleSearch}
             />
-            <List books={books}/>
+            <List books={books} />
         </div>
     )
 }
