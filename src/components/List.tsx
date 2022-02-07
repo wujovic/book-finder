@@ -20,7 +20,7 @@ export default function List(props: any) {
                                 title={book.volumeInfo.title}
                                 subtitle={book.volumeInfo.subtitle}
                                 author={book.volumeInfo.authors}
-                                published={book.volumeInfo.publishedDate}
+                                published={book.volumeInfo.publishedDate.substring(0, 4)}
                                 rating={book.volumeInfo.averageRating}
                                 link={book.volumeInfo.infoLink}
                             />
