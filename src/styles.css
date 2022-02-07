@@ -55,9 +55,18 @@ input:focus {
 
 /* list container */
 .list-container {
-
+  width: 90%;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
 }
 
+/* card */
 .card {
-  
+  text-align: center;
+}
+
+.no-data {
+  font-style: italic;
+  text-align: center;
 }
