@@ -1,6 +1,8 @@
 :root {
   --main-bck: #F8EDE3;
+  --sec-bck: #A2B29F;
   --main-txt: #474e46;
+  --no-data: #2e2f2e;
 }
 
 * {
@@ -16,6 +18,11 @@ body {
 h1 {
   color: var(--main-txt);
   font-size: 3.5rem;
+}
+
+p {
+  font-style: italic;
+  color: var(--no-data);
 }
 
 input {
@@ -34,11 +41,6 @@ input:focus {
   text-align: center;
 }
 
-/* main container */ 
-.main-container {
-  
-}
-
 /* search */
 .search {
   margin: 1rem auto 0 auto;
@@ -53,20 +55,65 @@ input:focus {
   text-align: center;
 }
 
+.no-data {
+  font-style: italic;
+  text-align: center;
+  color: var(--main-txt);
+}
+
 /* list container */
 .list-container {
   width: 90%;
   margin: 5rem auto;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "card card";
 }
 
 /* card */
 .card {
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 5px;
+  padding: 1rem;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(71, 78, 70, 0.32);
+  box-shadow: 5px 5px 15px 5px rgba(71, 78, 70, 0.32);
+}
+
+.cover {
+  height: 150px;
+  width: 100px;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(71, 78, 70, 0.24);
+  box-shadow: 5px 5px 15px 5px rgba(71, 78, 70, 0.24);
+}
+
+.card-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.card-head {
+  width: 100%;
+}
+
+.card-bottom a {
+  color: var(--main-txt);
+  text-decoration: none;
+}
+
+.credits {
   text-align: center;
 }
 
-.no-data {
-  font-style: italic;
-  text-align: center;
+.credits a {
+  color: var(--no-data)
 }

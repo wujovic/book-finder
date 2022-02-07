@@ -14,11 +14,14 @@ export default function List(props: any) {
                                 key={book.id}
                                 image={book.volumeInfo.imageLinks.smallThumbnail}
                                 title={book.volumeInfo.title}
+                                subtitle={book.volumeInfo.subtitle}
                                 author={book.volumeInfo.authors}
                                 published={book.volumeInfo.publishedDate}
+                                rating={book.volumeInfo.averageRating}
+                                link={book.volumeInfo.infoLink}
                             />
                         )
-                    }) : <p className="np-data">No books yet...</p>
+                    }) : null
             }
 
         </div>
